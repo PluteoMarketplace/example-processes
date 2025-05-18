@@ -1,0 +1,32 @@
+{
+  "name": "manual-payout-process",
+  "initial": "request",
+  "transitions": [
+    {
+      "name": "request",
+      "from": [],
+      "to": "requested"
+    },
+    {
+      "name": "accept",
+      "from": ["requested"],
+      "to": "accepted"
+    },
+    {
+      "name": "admin_authorise_payout",
+      "from": ["accepted"],
+      "to": "admin_payout_authorised"
+    },
+    {
+      "name": "complete",
+      "from": ["admin_payout_authorised"],
+      "to": "completed"
+    }
+  ],
+  "states": {
+    "requested": {},
+    "accepted": {},
+    "admin_payout_authorised": {},
+    "completed": {}
+  }
+}
