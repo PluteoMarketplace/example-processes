@@ -6,4 +6,4 @@ COPY . .
 
 RUN npm install -g https://github.com/sharetribe/flex-cli
 
-CMD [ "bash" ]
+CMD ["tail", "-f", "/dev/null"]
